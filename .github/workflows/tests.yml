@@ -1,0 +1,34 @@
+---
+name: Tests
+
+on:
+  push:
+    branches: [ "main", "develop" ]
+  pull_request:
+    branches: [ "main", "develop" ]
+
+
+jobs:
+  build:
+    name: Linter job
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout Code
+        uses: actions/checkout@v3
+        with:
+          # Full git history is needed to get a proper
+          # list of changed files within `super-linter`
+          fetch-depth: 0
+
+      - name: Lint code with super-linter
+        uses: github/super-linter@v4
+        env:
+          VALIDATE_ALL_CODEBAS: true
+          DEFAULT_BRANCH: develop
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+          VALIDATE_CSHARP: true
+          # Our .editorconfig file is in the base root
+          LINTER_RULES_PATH: /
+
