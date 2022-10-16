@@ -13,8 +13,9 @@ jobs:
     strategy:
       fail-fast: false
       matrix:
-        targetPlatform: # We should put here our target platforms, for the moment these 2 as an example
+        targetPlatform:
           - StandaloneWindows64
+          # We can add other platforms to the list, the options are available in 'game-ci/unity-builder' docs
     steps:
       - name: Checkout
         uses: actions/checkout@v3
