@@ -1,0 +1,26 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8dc826e8f6318498a8cb80c04b08a34d, type: 3}
+  m_Name: ClassicSoundBank
+  m_EditorClassIdentifier: 
+  LargeAsteroidExplosion: {fileID: 8300000, guid: 9d778044422d04f66a024db7b197e156, type: 3}
+  MediumAsteroidExplosion: {fileID: 8300000, guid: f1e9448933dd34c6192ac54e3a851f1b, type: 3}
+  SmallAsteroidExplosion: {fileID: 8300000, guid: 129e4582e778641cb96fcfe2fe98166c, type: 3}
+  ExtraShip: {fileID: 8300000, guid: cd180b26e6c3d4dc2a209c3d1a68d172, type: 3}
+  Fire: {fileID: 8300000, guid: b4db654ca29a540f08be9cf7e51ae69e, type: 3}
+  BigSaucer: {fileID: 8300000, guid: 2c733cd53ab6946128606d6ff2132cc0, type: 3}
+  SmallSaucer: {fileID: 8300000, guid: 59c8a1fbd13034fa98783f3f180156a0, type: 3}
+  Thrust: {fileID: 8300000, guid: 0ff423020b0b94d7d85745ded2d95bae, type: 3}
+  QuietBeat: {fileID: 8300000, guid: 05b1f56466e2f46bfb535ce84792d5d8, type: 3}
+  ExcitingBeat: {fileID: 8300000, guid: 10e46fff149744dc08607727e2a11907, type: 3}
+  QuietBeatTiming: 1
+  ExcitingBeatTiming: 0.5
