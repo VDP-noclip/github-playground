@@ -4,7 +4,7 @@ using System.Collections.Generic;
 using System.ComponentModel.Design.Serialization;
 using UnityEngine;
 
-public class SpaceShipController : Nonexistingclass
+public class SpaceShipController : MonoBehaviour
 {
     [SerializeField] private SpriteRenderer[] _spriteRenderers;
     [SerializeField] private float thrustForce = 1f;
