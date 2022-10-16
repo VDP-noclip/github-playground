@@ -1,0 +1,38 @@
+name: Build project
+
+on: [push, pull_request]
+
+# For later:
+# on:
+#   push:
+#     branches: [ * ]
+#   pull_request:
+#     branches: [ "main", "develop" ]
+
+jobs:
+  buildForAllSupportedPlatforms:
+    name: Build for ${{ matrix.targetPlatform }}
+    runs-on: ubuntu-latest
+    strategy:
+      fail-fast: false
+      matrix:
+        targetPlatform: # We should put here our target platforms, for the moment these 2 as an example
+          - StandaloneWindows64
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v3
+        with:
+          fetch-depth: 0
+          lfs: true
+      - name: Cache libraries
+        uses: actions/cache@v2
+        with:
+          path: Library
+          key: Library-${{ matrix.targetPlatform }}
+          restore-keys: Library-
+      - name: Build Unity project for ${{ matrix.targetPlatform }}
+        uses: game-ci/unity-builder@v2
+        env:
+          UNITY_LICENSE: ${{ secrets.UNITY_LICENSE }}
+        with:
+          targetPlatform: ${{ matrix.targetPlatform }}
